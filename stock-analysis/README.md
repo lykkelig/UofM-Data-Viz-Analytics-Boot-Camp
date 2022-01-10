@@ -23,19 +23,23 @@ The code was refactored per the instructions:
 1) Use arrays to store the volume. starting and ending prices
 2) Use a different variable for indexing.
 
+Before refactoring the time to calculate the spreadsheets was:
+   Before refactoring 2017: 1.09375 seconds 
+   Before refactoring 2018: 1.03906 seconds [Before 2018]
+
+   After refactoring 2017: 0.859375 seconds
+   After refactoring 2018: 0.820312 seconds
+
+   [Before refactoring 2017](https://github.com/lykkelig/UofM-Data-Viz-Analytics-Boot-Camp/blob/main/stock-analysis/Resources/Before-Refactoring-2017.png)
+   [Before refactoring 2018](https://github.com/lykkelig/UofM-Data-Viz-Analytics-Boot-Camp/blob/main/stock-analysis/Resources/Before-Refactoring-2018.png)
+
+   [After refactoring 2017](https://github.com/lykkelig/UofM-Data-Viz-Analytics-Boot-Camp/blob/main/stock-analysis/Resources/VBA_Challenge_2017.png)
+   [After refactoring 2018](https://github.com/lykkelig/UofM-Data-Viz-Analytics-Boot-Camp/blob/main/stock-analysis/Resources/VBA_Challenge_2018.png)
+
+
+So the refactoring using arrays definitely did improve performance. 
+With just 12 stocks the difference in time is not really noticable but if one scales up the application to thousands of tens of thousands of stocks it could make a significant difference.
 
 ## Summary
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?
-1) The most successful outcomes for productions occur in May.
-2) The worst outcomes for productions happen at the end of Decmber.
-
-- What can you conclude about the Outcomes based on Goals?
-	Productions with goals up to 4,999 are the most successful and then start to drop off with a dramatic drop in outcomes in the 25,000 to 29,999 range.
-
-- What are some limitations of this dataset?
-The dates are not in a format that are readable by humans and need to go through a transformation using the function:
-	=(((J2/60)/60)/24)+DATE(1970,1,1) to convert into a MM/DD/YYYY format.	
-
-- What are some other possible tables and/or graphs that we could create?
-There are several other subcategories that can be examined in a similar methodology.
+Using refactoring we were able to rethink some of the logic used in the VBA code to improve the performance of the executing code. The improvement in performance was an amazing 24%  after the refactoring. With just 12 stocks to analyze the time difference was not noticeable but if the application were to be scaled up to thousands or tens of thousnads of stock, it could make a major difference in end user satisfaction. 
