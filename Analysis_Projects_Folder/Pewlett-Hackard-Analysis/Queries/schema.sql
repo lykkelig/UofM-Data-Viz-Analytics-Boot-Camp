@@ -57,7 +57,9 @@ CREATE TABLE titles (
   to_date DATE NOT NULL,
   FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
   PRIMARY KEY (emp_no)
-);-- Creating tables for PH-EmployeeDB
+);
+
+-- Creating tables for PH-EmployeeDB
 CREATE TABLE titles (
   emp_no INT NOT NULL,
   title varchar NOT NULL,
